@@ -22,6 +22,7 @@ class TodolistRepositoryImpl implements TodolistRepository
 
         $this->todolist[$index] = $todolist;
     }
+
     function remove(int $number): bool
     {
 

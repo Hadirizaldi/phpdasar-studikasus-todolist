@@ -9,31 +9,27 @@ require_once __DIR__ . "/../Utils/Input.php";
 
 function viewShowTodolist()
 {
-    while(true) {
+    while (true) {
         showTodolist();
 
         echo "MENU" . PHP_EOL;
         echo "1. Add Todo" . PHP_EOL;
         echo "2. delete Todo" . PHP_EOL;
         echo "x. Quit" . PHP_EOL;
-    
+
         $choices = input("Choice");
-    
-        if($choices == "1") {
+
+        if ($choices == "1") {
             viewAddTodolist();
-        }
-        else if($choices == "2") {
+        } else if ($choices == "2") {
             viewDeleteTodolist();
-        }
-        else if($choices == "x") {
+        } else if ($choices == "x") {
             // quit
-            break;    
-        }
-        else {
+            break;
+        } else {
             echo "choices not found" . PHP_EOL;
         }
     }
 
-    echo "See You Next Time". PHP_EOL;
-
+    echo "See You Next Time" . PHP_EOL;
 }
