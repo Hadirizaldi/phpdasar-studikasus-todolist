@@ -14,6 +14,6 @@ class Database
         $password = "111213";
         $db = "php_todolist";
 
-        return new PDO("mysql:host=$host:$port;dbnames=$db", $username, $password);
+        return new PDO("mysql:host=$host:$port;dbname=$db", $username, $password);
     }
 }
