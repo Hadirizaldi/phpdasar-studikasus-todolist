@@ -15,13 +15,13 @@ function testShowTodolist(): void
     $connection = Database::getConnection();
 
     $todolistRepository = new TodolistRepositoryImpl($connection);
-    $todolistRepository->todolist[1] = new Todolist("PHP");
-    $todolistRepository->todolist[2] = new Todolist("PHP");
-    $todolistRepository->todolist[3] = new Todolist("PHP");
-
     $todolistService = new TodolistServiceImpl($todolistRepository);
 
-    // $todolistService->showTodolist();
+    // $todolistService->addTodolist("Django");
+    // $todolistService->addTodolist("Python");
+    // $todolistService->addTodolist("Ruby");
+
+    $todolistService->showTodolist();
 }
 
 function  testAddTodolist()
@@ -43,16 +43,15 @@ function testRemoveTodolist()
 
     $todolistRepository = new TodolistRepositoryImpl($connection);
     $todolistService = new TodolistServiceImpl($todolistRepository);
-    $todolistService->addTodolist("Django");
-    $todolistService->addTodolist("Python");
-    $todolistService->addTodolist("Ruby");
-    $todolistService->showTodolist();
-
     // test remove
-    $todolistService->removeTodolist(2);
-    $todolistService->showTodolist();
+    echo $todolistService->removeTodolist(7) . PHP_EOL;
+    echo $todolistService->removeTodolist(8) . PHP_EOL;
+    echo $todolistService->removeTodolist(9) . PHP_EOL;
+    echo $todolistService->removeTodolist(10) . PHP_EOL;
+    echo $todolistService->removeTodolist(11) . PHP_EOL;
+    echo $todolistService->removeTodolist(12) . PHP_EOL;
 }
 
 // testRemoveTodolist();
-testAddTodolist();
-// testShowTodolist();
+// testAddTodolist();
+testShowTodolist();

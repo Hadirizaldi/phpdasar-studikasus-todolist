@@ -63,13 +63,7 @@ class TodolistView
         if ($choice == 'x') {
             echo "Quit" . PHP_EOL;
         } else {
-            $success = $this->todolistService->removeTodolist($choice);
-
-            if ($success) {
-                echo "Success for delete todo number $choice" . PHP_EOL;
-            } else {
-                echo "Not Success for delete todo number $choice" . PHP_EOL;
-            }
+            $this->todolistService->removeTodolist($choice);
         }
     }
 }
